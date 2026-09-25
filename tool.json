@@ -1,0 +1,188 @@
+{
+  "tool": {
+    "id": "driving-pressure",
+    "title": "Driving pressure e complacência estática",
+    "short": "Pressão de distensão na ventilação mecânica",
+    "desc": "Calcule a driving pressure (platô menos PEEP) e a complacência estática do sistema respiratório, com os limites da ventilação protetora na SDRA.",
+    "lead": "A driving pressure é a variação de pressão no ciclo respiratório: reflete o volume corrente em relação ao pulmão aerado e foi a variável ventilatória mais associada à sobrevida na SDRA.",
+    "spec": [
+      "medicina-intensiva",
+      "anestesiologia",
+      "pneumologia"
+    ],
+    "fields": [
+      [
+        "vt",
+        "Volume corrente",
+        "num",
+        {
+          "min": 100,
+          "max": 1500,
+          "unit": "mL",
+          "ph": "420"
+        }
+      ],
+      [
+        "pplat",
+        "Pressão de platô (pausa inspiratória)",
+        "num",
+        {
+          "min": 5,
+          "max": 60,
+          "unit": "cmH₂O",
+          "ph": "25"
+        }
+      ],
+      [
+        "peep",
+        "PEEP total",
+        "num",
+        {
+          "min": 0,
+          "max": 30,
+          "unit": "cmH₂O",
+          "ph": "10"
+        }
+      ],
+      [
+        "pbw",
+        "Peso predito",
+        "num",
+        {
+          "min": 20,
+          "max": 120,
+          "step": 0.1,
+          "unit": "kg",
+          "ph": "70",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Driving pressure</strong> (ΔP) = pressão de platô − PEEP.</p><p><strong>Complacência estática</strong> = volume corrente ÷ ΔP (mL/cmH₂O).</p>",
+    "table": [
+      [
+        "Parâmetro",
+        "Alvo na ventilação protetora"
+      ],
+      [
+        "Driving pressure",
+        "≤ 15 cmH₂O"
+      ],
+      [
+        "Pressão de platô",
+        "≤ 30 cmH₂O"
+      ],
+      [
+        "Volume corrente",
+        "4 a 8 mL/kg de peso predito"
+      ]
+    ],
+    "tips": [
+      "Meça o platô com pausa inspiratória de 0,5 a 2 s, paciente sem esforço respiratório; esforço ativo invalida a medida.",
+      "Use a PEEP total (com auto-PEEP medida em pausa expiratória) quando houver obstrução ao fluxo expiratório.",
+      "Na análise de Amato (2015), cada aumento de 1 desvio-padrão da driving pressure (cerca de 7 cmH₂O) associou-se a maior mortalidade, mesmo com platô ≤ 30 cmH₂O.",
+      "Se a ΔP subir ao aumentar a PEEP, a PEEP extra está hiperdistendendo mais que recrutando; se cair, houve recrutamento."
+    ],
+    "sources": [
+      [
+        "Amato MBP et al. Driving pressure and survival in the acute respiratory distress syndrome. N Engl J Med, 2015.",
+        "https://doi.org/10.1056/NEJMsa1410639"
+      ],
+      [
+        "Fan E et al. An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome. Am J Respir Crit Care Med, 2017.",
+        "https://doi.org/10.1164/rccm.201703-0548ST"
+      ]
+    ],
+    "cases": [
+      [
+        "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        {
+          "vt": 420,
+          "pplat": 25,
+          "peep": 10
+        },
+        {
+          "raw": {
+            "dp": 15,
+            "cst": 28
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        {
+          "vt": 450,
+          "pplat": 30,
+          "peep": 8
+        },
+        {
+          "raw": {
+            "dp": 22,
+            "cst": 20.45
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        {
+          "vt": 500,
+          "pplat": 18,
+          "peep": 5,
+          "pbw": 70
+        },
+        {
+          "raw": {
+            "dp": 13,
+            "cst": 38.46
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "Platô menor que a PEEP: erro",
+        {
+          "vt": 400,
+          "pplat": 6,
+          "peep": 8
+        },
+        {
+          "error": true
+        }
+      ]
+    ],
+    "batch": "urgencia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "urgencia",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/urgencia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/urgencia.php",
+    "sha256": "b24f3a77383430c3f3463168e78e88341034b3108bd712f3613ae32672dc281c",
+    "bytes": 121059
+  },
+  "clinicalValidation": "not-performed"
+}

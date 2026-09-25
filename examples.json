@@ -1,0 +1,84 @@
+[
+  {
+    "label": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "raw": {
+        "dp": 15,
+        "cst": 28
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+    "input": {
+      "vt": 450,
+      "pplat": 30,
+      "peep": 8
+    },
+    "expected": {
+      "raw": {
+        "dp": 22,
+        "cst": 20.45
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "vt": 450,
+      "pplat": 30,
+      "peep": 8
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+    "input": {
+      "vt": 500,
+      "pplat": 18,
+      "peep": 5,
+      "pbw": 70
+    },
+    "expected": {
+      "raw": {
+        "dp": 13,
+        "cst": 38.46
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "vt": 500,
+      "pplat": 18,
+      "peep": 5,
+      "pbw": 70
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Platô menor que a PEEP: erro",
+    "input": {
+      "vt": 400,
+      "pplat": 6,
+      "peep": 8
+    },
+    "expected": {
+      "error": true
+    },
+    "originalInput": {
+      "vt": 400,
+      "pplat": 6,
+      "peep": 8
+    },
+    "expandedZeroOptions": []
+  }
+]
