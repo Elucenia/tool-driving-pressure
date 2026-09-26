@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-driving-pressure · Elucenia · https://github.com/Elucenia/tool-driving-pressure
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"driving-pressure","title":"Driving pressure e complacência estática","fields":[["vt","Volume corrente","num",{"min":100,"max":1500,"unit":"mL","ph":"420"}],["pplat","Pressão de platô (pausa inspiratória)","num",{"min":5,"max":60,"unit":"cmH₂O","ph":"25"}],["peep","PEEP total","num",{"min":0,"max":30,"unit":"cmH₂O","ph":"10"}],["pbw","Peso predito","num",{"min":20,"max":120,"step":0.1,"unit":"kg","ph":"70","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
