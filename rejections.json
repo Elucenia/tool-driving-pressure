@@ -1,0 +1,537 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field vt",
+    "input": {
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field vt",
+    "input": {
+      "vt": "",
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" vt",
+    "input": {
+      "vt": "NaN",
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" vt",
+    "input": {
+      "vt": "Infinity",
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" vt",
+    "input": {
+      "vt": "1e309",
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" vt",
+    "input": {
+      "vt": "invalid",
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} vt",
+    "input": {
+      "vt": {},
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true vt",
+    "input": {
+      "vt": true,
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum vt",
+    "input": {
+      "vt": 90,
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum vt",
+    "input": {
+      "vt": 1650,
+      "pplat": 25,
+      "peep": 10
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "vt"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field pplat",
+    "input": {
+      "vt": 420,
+      "peep": 10
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field pplat",
+    "input": {
+      "vt": 420,
+      "pplat": "",
+      "peep": 10
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pplat",
+    "input": {
+      "vt": 420,
+      "pplat": "NaN",
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pplat",
+    "input": {
+      "vt": 420,
+      "pplat": "Infinity",
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pplat",
+    "input": {
+      "vt": 420,
+      "pplat": "1e309",
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pplat",
+    "input": {
+      "vt": 420,
+      "pplat": "invalid",
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pplat",
+    "input": {
+      "vt": 420,
+      "pplat": {},
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pplat",
+    "input": {
+      "vt": 420,
+      "pplat": true,
+      "peep": 10
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pplat",
+    "input": {
+      "vt": 420,
+      "pplat": 4,
+      "peep": 10
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pplat",
+    "input": {
+      "vt": 420,
+      "pplat": 66,
+      "peep": 10
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pplat"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": -1
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum peep",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 33
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "peep"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": 18
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum pbw",
+    "input": {
+      "vt": 420,
+      "pplat": 25,
+      "peep": 10,
+      "pbw": 132
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "pbw"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

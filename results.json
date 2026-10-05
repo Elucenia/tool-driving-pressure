@@ -1,0 +1,346 @@
+{
+  "id": "driving-pressure",
+  "at": "2026-10-05T17:29:18.632Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/driving-pressure/calculator.js",
+    "bytes": 5100,
+    "sha256": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a"
+  },
+  "cases": [
+    {
+      "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+      "input": {
+        "vt": 420,
+        "pplat": 25,
+        "peep": 10
+      },
+      "obtained": {
+        "id": "driving-pressure",
+        "main": [
+          "15",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.dp",
+          "expected": 15,
+          "obtained": 15,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cst",
+          "expected": 28,
+          "obtained": 28,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dp",
+          "expected": 15,
+          "obtained": 15,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cst",
+          "expected": 28,
+          "obtained": 28,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "15",
+          "obtained": "15",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "cmH₂O",
+          "obtained": "cmH₂O",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+      "input": {
+        "vt": 450,
+        "pplat": 30,
+        "peep": 8
+      },
+      "obtained": {
+        "id": "driving-pressure",
+        "main": [
+          "22",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 22,
+          "cst": 20.454545454545453
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.dp",
+          "expected": 22,
+          "obtained": 22,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cst",
+          "expected": 20.45,
+          "obtained": 20.454545454545453,
+          "tolerance": 0.00500001,
+          "difference": 0.004545454545453964,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dp",
+          "expected": 22,
+          "obtained": 22,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cst",
+          "expected": 20.454545454545453,
+          "obtained": 20.454545454545453,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "22",
+          "obtained": "22",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "cmH₂O",
+          "obtained": "cmH₂O",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+      "input": {
+        "vt": 500,
+        "pplat": 18,
+        "peep": 5,
+        "pbw": 70
+      },
+      "obtained": {
+        "id": "driving-pressure",
+        "main": [
+          "13",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 13,
+          "cst": 38.46153846153846
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.dp",
+          "expected": 13,
+          "obtained": 13,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.cst",
+          "expected": 38.46,
+          "obtained": 38.46153846153846,
+          "tolerance": 0.00500001,
+          "difference": 0.001538461538459046,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.dp",
+          "expected": 13,
+          "obtained": 13,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.cst",
+          "expected": 38.46153846153846,
+          "obtained": 38.46153846153846,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "13",
+          "obtained": "13",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "cmH₂O",
+          "obtained": "cmH₂O",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Platô menor que a PEEP: erro",
+      "input": {
+        "vt": 400,
+        "pplat": 6,
+        "peep": 8
+      },
+      "obtained": {
+        "error": "A pressão de platô precisa ser maior que a PEEP.",
+        "code": "FORMULA_DOMAIN"
+      },
+      "checks": [
+        {
+          "at": "recorded-rejection",
+          "expected": "4xx with error and no result",
+          "obtained": {
+            "status": 422,
+            "error": "A pressão de platô precisa ser maior que a PEEP.",
+            "result": false
+          },
+          "passed": true
+        }
+      ],
+      "notCompared": [],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 42,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

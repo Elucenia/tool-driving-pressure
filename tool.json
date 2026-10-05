@@ -5,6 +5,7 @@
     "short": "Pressão de distensão na ventilação mecânica",
     "desc": "Calcule a driving pressure (platô menos PEEP) e a complacência estática do sistema respiratório, com os limites da ventilação protetora na SDRA.",
     "lead": "A driving pressure é a variação de pressão no ciclo respiratório: reflete o volume corrente em relação ao pulmão aerado e foi a variável ventilatória mais associada à sobrevida na SDRA.",
+    "kind": "Calculadora",
     "spec": [
       "medicina-intensiva",
       "anestesiologia",
@@ -59,30 +60,6 @@
       ]
     ],
     "formula": "<p><strong>Driving pressure</strong> (ΔP) = pressão de platô − PEEP.</p><p><strong>Complacência estática</strong> = volume corrente ÷ ΔP (mL/cmH₂O).</p>",
-    "table": [
-      [
-        "Parâmetro",
-        "Alvo na ventilação protetora"
-      ],
-      [
-        "Driving pressure",
-        "≤ 15 cmH₂O"
-      ],
-      [
-        "Pressão de platô",
-        "≤ 30 cmH₂O"
-      ],
-      [
-        "Volume corrente",
-        "4 a 8 mL/kg de peso predito"
-      ]
-    ],
-    "tips": [
-      "Meça o platô com pausa inspiratória de 0,5 a 2 s, paciente sem esforço respiratório; esforço ativo invalida a medida.",
-      "Use a PEEP total (com auto-PEEP medida em pausa expiratória) quando houver obstrução ao fluxo expiratório.",
-      "Na análise de Amato (2015), cada aumento de 1 desvio-padrão da driving pressure (cerca de 7 cmH₂O) associou-se a maior mortalidade, mesmo com platô ≤ 30 cmH₂O.",
-      "Se a ΔP subir ao aumentar a PEEP, a PEEP extra está hiperdistendendo mais que recrutando; se cair, houve recrutamento."
-    ],
     "sources": [
       [
         "Amato MBP et al. Driving pressure and survival in the acute respiratory distress syndrome. N Engl J Med, 2015.",
@@ -152,9 +129,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -163,17 +137,162 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-03T17:15:29.797Z",
+      "total": 2,
+      "passed": 2,
+      "evidencePath": "reports/review-20261003/native-additional-independent-oracles.json",
+      "scope": "Additional independent arithmetic checks for14 previously unchecked native tools. Formula indication and clinical outcomes are outside these numerical checks.",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "ΔP=Pplat−PEEP; Cstat=VT/ΔP; contexto Amato 2015 ventilação passiva",
+    "implementationVersion": "driving-pressure@native-2026-10-03+dc496350e6e6",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/25693014/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Driving pressure (ΔP) = pressão de platô − PEEP. Complacência estática = volume corrente ÷ ΔP (mL/cmH₂O).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "vt",
+            "label": "Volume corrente",
+            "type": "num",
+            "min": 100,
+            "max": 1500,
+            "unit": "mL",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pplat",
+            "label": "Pressão de platô (pausa inspiratória)",
+            "type": "num",
+            "min": 5,
+            "max": 60,
+            "unit": "cmH₂O",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "peep",
+            "label": "PEEP total",
+            "type": "num",
+            "min": 0,
+            "max": 30,
+            "unit": "cmH₂O",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "pbw",
+            "label": "Peso predito",
+            "type": "num",
+            "min": 20,
+            "max": 120,
+            "unit": "kg",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "981c67899dc9be1a01e341db4963e61a2eaaa3e7d4c1f85ca266d7b56984a510"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Amato MBP et al. Driving pressure and survival in the acute respiratory distress syndrome. N Engl J Med, 2015.",
+          "url": "https://doi.org/10.1056/NEJMsa1410639",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Driving pressure and survival in the acute respiratory distress syndrome.",
+            "year": "2015",
+            "firstPublicationDate": "2015-02-01",
+            "doi": "10.1056/nejmsa1410639",
+            "pmid": "25693014",
+            "journal": "The New England journal of medicine",
+            "authors": "Amato MB, Meade MO, Slutsky AS, Brochard L, Costa EL, Schoenfeld DA, Stewart TE, Briel M, Talmor D, Mercat A, Richard JC, Carvalho CR, Brower RG."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/25693014/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "57417a0eb1f5fa4c2e94fc549f206346f8cad65b8b20cd6b3bd17bdea80f321d",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Fan E et al. An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome. Am J Respir Crit Care Med, 2017.",
+          "url": "https://doi.org/10.1164/rccm.201703-0548ST",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "An Official American Thoracic Society/European Society of Intensive Care Medicine/Society of Critical Care Medicine Clinical Practice Guideline: Mechanical Ventilation in Adult Patients with Acute Respiratory Distress Syndrome.",
+            "year": "2017",
+            "firstPublicationDate": "2017-05-01",
+            "doi": "10.1164/rccm.201703-0548st",
+            "pmid": "28459336",
+            "journal": "American journal of respiratory and critical care medicine",
+            "authors": "Fan E, Del Sorbo L, Goligher EC, Hodgson CL, Munshi L, Walkey AJ, Adhikari NKJ, Amato MBP, Branson R, Brower RG, Ferguson ND, Gajic O, Gattinoni L, Hess D, Mancebo J, Meade MO, McAuley DF, Pesenti A, Ranieri VM, Rubenfeld GD, Rubin E, Seckel M, Slutsky AS, Talmor D, Thompson BT, Wunsch H, Uleryk E, Brozek J, Brochard LJ, American Thoracic Society, European Society of Intensive Care Medicine, and Society of Critical Care Medicine."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/28459336/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "5d2da4cb86f681fd662303f11a86d7c2a708b755377e36eafb9f058b54dee764",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-03T17:15:29.797Z",
+        "total": 2,
+        "passed": 2,
+        "evidencePath": "reports/review-20261003/native-additional-independent-oracles.json",
+        "scope": "Additional independent arithmetic checks for14 previously unchecked native tools. Formula indication and clinical outcomes are outside these numerical checks.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "ea84212adadba6943ef0a12007db685de51bfd21437e23a9d22dd774e84c606d",
+          "meaning": "Reference to the already recorded per-tool evidence; no new test or approval is created by this synchronization."
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a"
+    },
+    "limits": "A análise Amato 2015 estudou 3562 pacientes com SDRA de nove ensaios prévios, no contexto de ventilação sem respiração ativa. A driving pressure foi analisada como VT/CRS e como variável associada à sobrevivência; essa associação não estabelece, sozinha, um limiar universal ou uma intervenção terapêutica guiada pelo cálculo. Técnica de medida e condições ventilatórias precisam ser conferidas.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.809Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "O resumo não especifica toda técnica de medida, espontaneidade/relaxamento, duração de pausa ou limiar universal de intervenção."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/driving-pressure/calculator.js",
+    "bytes": 5100,
+    "sha256": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "9b4b246efb5a5c6748f1fa239ca7883719026c9b43cac634c7a744b3f7025881",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 2,
+      "sha256": "fdb62bb18eb195f207bc8685be992ad4fc14b2ef0417ad9aee86c546cc7e8b09",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
