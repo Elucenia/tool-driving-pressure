@@ -1,0 +1,798 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "driving-pressure",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/driving-pressure/calculator.js",
+    "sha256": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a",
+    "bytes": 5100
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "driving-pressure",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+      "originalInput": {
+        "vt": 420,
+        "pplat": 25,
+        "peep": 10
+      },
+      "input": {
+        "vt": 420,
+        "pplat": 25,
+        "peep": 10
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        },
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "15",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vt": 420,
+            "pplat": 25,
+            "peep": 10
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+          "startedAt": "2026-10-05T17:36:47.400Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "driving-pressure",
+              "main": [
+                "15",
+                "cmH₂O"
+              ],
+              "label": "Driving pressure (Pplatô − PEEP)",
+              "raw": {
+                "dp": 15,
+                "cst": 28
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "72fa756e9fb06541ecfdd89f3f1258d17fa0a519318b693e3f995e03d089299c",
+          "bytes": 168,
+          "elapsedMs": 5.307699999997567
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "startedAt": "2026-10-05T17:36:47.400Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "driving-pressure",
+            "main": [
+              "15",
+              "cmH₂O"
+            ],
+            "label": "Driving pressure (Pplatô − PEEP)",
+            "raw": {
+              "dp": 15,
+              "cst": 28
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "72fa756e9fb06541ecfdd89f3f1258d17fa0a519318b693e3f995e03d089299c",
+        "bytes": 168,
+        "elapsedMs": 5.307699999997567
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.dp",
+            "expected": 15,
+            "obtained": 15,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cst",
+            "expected": 28,
+            "obtained": 28,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dp",
+            "expected": 15,
+            "obtained": 15,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cst",
+            "expected": 28,
+            "obtained": 28,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "15",
+            "obtained": "15",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "cmH₂O",
+            "obtained": "cmH₂O",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "driving-pressure",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+      "originalInput": {
+        "vt": 450,
+        "pplat": 30,
+        "peep": 8
+      },
+      "input": {
+        "vt": 450,
+        "pplat": 30,
+        "peep": 8
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "dp": 22,
+          "cst": 20.45
+        },
+        "level": "high"
+      },
+      "recordedResult": {
+        "main": [
+          "22",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 22,
+          "cst": 20.454545454545453
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vt": 450,
+            "pplat": 30,
+            "peep": 8
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+          "startedAt": "2026-10-05T17:36:47.714Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "driving-pressure",
+              "main": [
+                "22",
+                "cmH₂O"
+              ],
+              "label": "Driving pressure (Pplatô − PEEP)",
+              "raw": {
+                "dp": 22,
+                "cst": 20.454545454545453
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "b9c2fda637ea25d40bb0d223d34ab3c90dd9667010edaf900769100a2f2ae7b5",
+          "bytes": 184,
+          "elapsedMs": 2.6718999999939115
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "startedAt": "2026-10-05T17:36:47.714Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "driving-pressure",
+            "main": [
+              "22",
+              "cmH₂O"
+            ],
+            "label": "Driving pressure (Pplatô − PEEP)",
+            "raw": {
+              "dp": 22,
+              "cst": 20.454545454545453
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "b9c2fda637ea25d40bb0d223d34ab3c90dd9667010edaf900769100a2f2ae7b5",
+        "bytes": 184,
+        "elapsedMs": 2.6718999999939115
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.dp",
+            "expected": 22,
+            "obtained": 22,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cst",
+            "expected": 20.45,
+            "obtained": 20.454545454545453,
+            "tolerance": 0.00500001,
+            "difference": 0.004545454545453964,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dp",
+            "expected": 22,
+            "obtained": 22,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cst",
+            "expected": 20.454545454545453,
+            "obtained": 20.454545454545453,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "22",
+            "obtained": "22",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "cmH₂O",
+            "obtained": "cmH₂O",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "driving-pressure",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+      "originalInput": {
+        "vt": 500,
+        "pplat": 18,
+        "peep": 5,
+        "pbw": 70
+      },
+      "input": {
+        "vt": 500,
+        "pplat": 18,
+        "peep": 5,
+        "pbw": 70
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "dp": 13,
+          "cst": 38.46
+        },
+        "level": "low"
+      },
+      "recordedResult": {
+        "main": [
+          "13",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 13,
+          "cst": 38.46153846153846
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vt": 500,
+            "pplat": 18,
+            "peep": 5,
+            "pbw": 70
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+          "startedAt": "2026-10-05T17:36:48.028Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "driving-pressure",
+              "main": [
+                "13",
+                "cmH₂O"
+              ],
+              "label": "Driving pressure (Pplatô − PEEP)",
+              "raw": {
+                "dp": 13,
+                "cst": 38.46153846153846
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "dbf893053ce9c75cd2e2f40450fb76a8c1da49034f0b7e350d7879c9e7f76c76",
+          "bytes": 183,
+          "elapsedMs": 6.621500000001106
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "startedAt": "2026-10-05T17:36:48.028Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "driving-pressure",
+            "main": [
+              "13",
+              "cmH₂O"
+            ],
+            "label": "Driving pressure (Pplatô − PEEP)",
+            "raw": {
+              "dp": 13,
+              "cst": 38.46153846153846
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "dbf893053ce9c75cd2e2f40450fb76a8c1da49034f0b7e350d7879c9e7f76c76",
+        "bytes": 183,
+        "elapsedMs": 6.621500000001106
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.dp",
+            "expected": 13,
+            "obtained": 13,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.cst",
+            "expected": 38.46,
+            "obtained": 38.46153846153846,
+            "tolerance": 0.00500001,
+            "difference": 0.001538461538459046,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.dp",
+            "expected": 13,
+            "obtained": 13,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.cst",
+            "expected": 38.46153846153846,
+            "obtained": 38.46153846153846,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "13",
+            "obtained": "13",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "cmH₂O",
+            "obtained": "cmH₂O",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "driving-pressure",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "Platô menor que a PEEP: erro",
+      "originalInput": {
+        "vt": 400,
+        "pplat": 6,
+        "peep": 8
+      },
+      "input": {
+        "vt": 400,
+        "pplat": 6,
+        "peep": 8
+      },
+      "amendments": [],
+      "expected": {
+        "error": true
+      },
+      "recordedResult": {
+        "error": "A pressão de platô precisa ser maior que a PEEP."
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "vt": 400,
+            "pplat": 6,
+            "peep": 8
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+          "startedAt": "2026-10-05T17:36:48.339Z",
+          "status": 422,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "error": "A pressão de platô precisa ser maior que a PEEP.",
+            "code": "FORMULA_DOMAIN"
+          },
+          "responseSha256": "8167b7da0dcc02c9c561acdff694f67a0a0865dfc72aef97e5bf4e5097dccf68",
+          "bytes": 86,
+          "elapsedMs": 5.061300000001211
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/driving-pressure/calculate",
+        "startedAt": "2026-10-05T17:36:48.339Z",
+        "status": 422,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "error": "A pressão de platô precisa ser maior que a PEEP.",
+          "code": "FORMULA_DOMAIN"
+        },
+        "responseSha256": "8167b7da0dcc02c9c561acdff694f67a0a0865dfc72aef97e5bf4e5097dccf68",
+        "bytes": 86,
+        "elapsedMs": 5.061300000001211
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "recorded-rejection",
+            "expected": "4xx with error and no result",
+            "obtained": {
+              "status": 422,
+              "error": "A pressão de platô precisa ser maior que a PEEP.",
+              "result": false
+            },
+            "passed": true
+          }
+        ],
+        "notCompared": []
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
