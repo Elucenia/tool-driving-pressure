@@ -79,3 +79,35 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Driving pressure bis 15 cmH₂O
+
+| Ergebnisdetails | |
+| --- | --- |
+| Statische Compliance | 28,0 mL/cmH₂O |
+
+
+### 2
+
+Driving pressure über 15 cmH₂O: mit höherer Mortalität beim ARDS assoziiert
+
+| Ergebnisdetails | |
+| --- | --- |
+| Statische Compliance | 20,5 mL/cmH₂O |
+
+
+### 3
+
+Driving pressure bis 15 cmH₂O
+
+| Ergebnisdetails | |
+| --- | --- |
+| Statische Compliance | 38,5 mL/cmH₂O |
+| Atemzugvolumen | 7,1 mL/kg des vorhergesagten Körpergewichts |
+

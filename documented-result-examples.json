@@ -1,0 +1,1045 @@
+{
+  "id": "driving-pressure",
+  "implementationVersion": "driving-pressure@native-2026-10-05+9858e74ae512",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Complacência estática",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "28,0 mL/cmH₂O",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure até 15 cmH₂O",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Complacência estática",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "20,5 mL/cmH₂O",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure acima de 15 cmH₂O: associada a maior mortalidade na SDRA",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Complacência estática",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "38,5 mL/cmH₂O",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Volume corrente",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "7,1 mL/kg de peso predito",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure até 15 cmH₂O",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Static compliance",
+                "locale": "en",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28.0 mL/cmH₂O",
+                "locale": "en",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure up to 15 cmH₂O",
+            "locale": "en",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Static compliance",
+                "locale": "en",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20.5 mL/cmH₂O",
+                "locale": "en",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure above 15 cmH₂O: associated with higher mortality in ARDS",
+            "locale": "en",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Static compliance",
+                "locale": "en",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38.5 mL/cmH₂O",
+                "locale": "en",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Tidal volume",
+                "locale": "en",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7.1 mL/kg of predicted body weight",
+                "locale": "en",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure up to 15 cmH₂O",
+            "locale": "en",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Distensibilidad estática",
+                "locale": "es",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28,0 mL/cmH₂O",
+                "locale": "es",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Presión de distensión hasta 15 cmH₂O",
+            "locale": "es",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Distensibilidad estática",
+                "locale": "es",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20,5 mL/cmH₂O",
+                "locale": "es",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Presión de conducción por encima de 15 cmH₂O: asociada con mayor mortalidad en el SDRA",
+            "locale": "es",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Distensibilidad estática",
+                "locale": "es",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38,5 mL/cmH₂O",
+                "locale": "es",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Volumen corriente",
+                "locale": "es",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7,1 mL/kg de peso predicho",
+                "locale": "es",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Presión de distensión hasta 15 cmH₂O",
+            "locale": "es",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statique",
+                "locale": "fr",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28,0 mL/cmH₂O",
+                "locale": "fr",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Pression motrice jusqu’à 15 cmH₂O",
+            "locale": "fr",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statique",
+                "locale": "fr",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20,5 mL/cmH₂O",
+                "locale": "fr",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Pression de commande supérieure à 15 cmH₂O : associée à une mortalité plus élevée dans le SDRA",
+            "locale": "fr",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statique",
+                "locale": "fr",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38,5 mL/cmH₂O",
+                "locale": "fr",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Volume courant",
+                "locale": "fr",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7,1 mL/kg de poids prédit",
+                "locale": "fr",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Pression motrice jusqu’à 15 cmH₂O",
+            "locale": "fr",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Statische Compliance",
+                "locale": "de",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28,0 mL/cmH₂O",
+                "locale": "de",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure bis 15 cmH₂O",
+            "locale": "de",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Statische Compliance",
+                "locale": "de",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20,5 mL/cmH₂O",
+                "locale": "de",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure über 15 cmH₂O: mit höherer Mortalität beim ARDS assoziiert",
+            "locale": "de",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Statische Compliance",
+                "locale": "de",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38,5 mL/cmH₂O",
+                "locale": "de",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Atemzugvolumen",
+                "locale": "de",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7,1 mL/kg des vorhergesagten Körpergewichts",
+                "locale": "de",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure bis 15 cmH₂O",
+            "locale": "de",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statica",
+                "locale": "it",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28,0 mL/cmH₂O",
+                "locale": "it",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure fino a 15 cmH₂O",
+            "locale": "it",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statica",
+                "locale": "it",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20,5 mL/cmH₂O",
+                "locale": "it",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure sopra 15 cmH₂O: associata a maggiore mortalità nella ARDS",
+            "locale": "it",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Compliance statica",
+                "locale": "it",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38,5 mL/cmH₂O",
+                "locale": "it",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Volume corrente",
+                "locale": "it",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7,1 mL/kg di peso predetto",
+                "locale": "it",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Driving pressure fino a 15 cmH₂O",
+            "locale": "it",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "المطاوعة الساكنة",
+                "locale": "ar",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "٢٨٫٠ mL/cmH₂O",
+                "locale": "ar",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الضغط الدافع حتى 15 cmH₂O",
+            "locale": "ar",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "المطاوعة الساكنة",
+                "locale": "ar",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "٢٠٫٥ mL/cmH₂O",
+                "locale": "ar",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ضغط القيادة فوق 15 cmH₂O: مرتبط بزيادة الوفيات في متلازمة الضائقة التنفسية الحادة",
+            "locale": "ar",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "المطاوعة الساكنة",
+                "locale": "ar",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "٣٨٫٥ mL/cmH₂O",
+                "locale": "ar",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "الحجم الجاري",
+                "locale": "ar",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "٧٫١ mL/kg من الوزن المتوقع",
+                "locale": "ar",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "الضغط الدافع حتى 15 cmH₂O",
+            "locale": "ar",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静态顺应性",
+                "locale": "zh",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28.0 mL/cmH₂O",
+                "locale": "zh",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "驱动压高达 15 cmH₂O",
+            "locale": "zh",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静态顺应性",
+                "locale": "zh",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20.5 mL/cmH₂O",
+                "locale": "zh",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "驱动压高于 15 cmH₂O：与 ARDS 中更高的死亡率相关",
+            "locale": "zh",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静态顺应性",
+                "locale": "zh",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38.5 mL/cmH₂O",
+                "locale": "zh",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "潮气量",
+                "locale": "zh",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7.1 mL/kg 预测体重",
+                "locale": "zh",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "驱动压高达 15 cmH₂O",
+            "locale": "zh",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静的コンプライアンス",
+                "locale": "ja",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28.0 mL/cmH₂O",
+                "locale": "ja",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ドライビングプレッシャーは15 cmH₂Oまで",
+            "locale": "ja",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静的コンプライアンス",
+                "locale": "ja",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20.5 mL/cmH₂O",
+                "locale": "ja",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "15 cmH₂O を超える Driving pressure：ARDS におけるより高い死亡率と関連",
+            "locale": "ja",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "静的コンプライアンス",
+                "locale": "ja",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38.5 mL/cmH₂O",
+                "locale": "ja",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "一回換気量",
+                "locale": "ja",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7.1 mL/kg の予測体重",
+                "locale": "ja",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "ドライビングプレッシャーは15 cmH₂Oまで",
+            "locale": "ja",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "स्थिर कंप्लायंस",
+                "locale": "hi",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "28.0 mL/cmH₂O",
+                "locale": "hi",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  28
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "15 cmH₂O तक ड्राइविंग प्रेशर",
+            "locale": "hi",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "स्थिर कंप्लायंस",
+                "locale": "hi",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "20.5 mL/cmH₂O",
+                "locale": "hi",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  20.5
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "15 cmH₂O से अधिक Driving pressure: ARDS में अधिक मृत्यु दर से संबद्ध",
+            "locale": "hi",
+            "template": "documented-authored-51ed57ac522efe7a66b3"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "स्थिर कंप्लायंस",
+                "locale": "hi",
+                "template": "documented-authored-6ceefd1efa17a7d89038"
+              },
+              "value": {
+                "text": "38.5 mL/cmH₂O",
+                "locale": "hi",
+                "template": "documented-authored-f787632624557b676a69",
+                "sourceNumbers": [
+                  38.5
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "टाइडल वॉल्यूम",
+                "locale": "hi",
+                "template": "documented-authored-5367b300d63c482d03ed"
+              },
+              "value": {
+                "text": "7.1 mL/kg पूर्वानुमानित शरीर भार",
+                "locale": "hi",
+                "template": "documented-authored-3fec877667738762e96a",
+                "sourceNumbers": [
+                  7.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "15 cmH₂O तक ड्राइविंग प्रेशर",
+            "locale": "hi",
+            "template": "documented-authored-5487b774b63fd4764960"
+          },
+          "level": "low"
+        }
+      }
+    ]
+  }
+}

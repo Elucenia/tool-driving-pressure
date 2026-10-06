@@ -79,3 +79,35 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Driving pressure até 15 cmH₂O
+
+| Detalhes do resultado | |
+| --- | --- |
+| Complacência estática | 28,0 mL/cmH₂O |
+
+
+### 2
+
+Driving pressure acima de 15 cmH₂O: associada a maior mortalidade na SDRA
+
+| Detalhes do resultado | |
+| --- | --- |
+| Complacência estática | 20,5 mL/cmH₂O |
+
+
+### 3
+
+Driving pressure até 15 cmH₂O
+
+| Detalhes do resultado | |
+| --- | --- |
+| Complacência estática | 38,5 mL/cmH₂O |
+| Volume corrente | 7,1 mL/kg de peso predito |
+

@@ -1,0 +1,221 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "driving-pressure",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "ca8f9b5904960f91fe053f859b8650c056a50176",
+    "oldEngineSha256": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a",
+    "currentEngineSha256": "9858e74ae51246321a4aa5142d1025062c33889235f4a39533a6564f2f569a1b"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "VC 420, platô 25, PEEP 10: ΔP 15 (limite), Cst 28",
+      "input": {
+        "vt": 420,
+        "pplat": 25,
+        "peep": 10
+      },
+      "publicOutput": {
+        "id": "driving-pressure",
+        "main": [
+          "15",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        },
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "15",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "level": "low",
+        "verdict": "Driving pressure até 15 cmH₂O",
+        "rows": [
+          [
+            "Complacência estática",
+            "28,0 mL/cmH₂O"
+          ]
+        ],
+        "raw": {
+          "dp": 15,
+          "cst": 28
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "VC 450, platô 30, PEEP 8: ΔP 22, Cst 20,5",
+      "input": {
+        "vt": 450,
+        "pplat": 30,
+        "peep": 8
+      },
+      "publicOutput": {
+        "id": "driving-pressure",
+        "main": [
+          "22",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 22,
+          "cst": 20.454545454545453
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "dp": 22,
+          "cst": 20.45
+        },
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "22",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "level": "high",
+        "verdict": "Driving pressure acima de 15 cmH₂O: associada a maior mortalidade na SDRA",
+        "rows": [
+          [
+            "Complacência estática",
+            "20,5 mL/cmH₂O"
+          ]
+        ],
+        "raw": {
+          "dp": 22,
+          "cst": 20.454545454545453
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "VC 500, platô 18, PEEP 5, peso predito 70: ΔP 13, Cst 38,5",
+      "input": {
+        "vt": 500,
+        "pplat": 18,
+        "peep": 5,
+        "pbw": 70
+      },
+      "publicOutput": {
+        "id": "driving-pressure",
+        "main": [
+          "13",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "raw": {
+          "dp": 13,
+          "cst": 38.46153846153846
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "dp": 13,
+          "cst": 38.46
+        },
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "13",
+          "cmH₂O"
+        ],
+        "label": "Driving pressure (Pplatô − PEEP)",
+        "level": "low",
+        "verdict": "Driving pressure até 15 cmH₂O",
+        "rows": [
+          [
+            "Complacência estática",
+            "38,5 mL/cmH₂O"
+          ],
+          [
+            "Volume corrente",
+            "7,1 mL/kg de peso predito"
+          ]
+        ],
+        "raw": {
+          "dp": 13,
+          "cst": 38.46153846153846
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "Platô menor que a PEEP: erro",
+      "input": {
+        "vt": 400,
+        "pplat": 6,
+        "peep": 8
+      },
+      "publicOutput": {
+        "error": "A pressão de platô precisa ser maior que a PEEP.",
+        "code": "FORMULA_DOMAIN"
+      },
+      "sourceExpected": {
+        "error": true
+      },
+      "state": "existing-rejection"
+    }
+  ]
+}

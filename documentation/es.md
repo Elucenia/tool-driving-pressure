@@ -79,3 +79,35 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Presión de distensión hasta 15 cmH₂O
+
+| Detalles del resultado | |
+| --- | --- |
+| Distensibilidad estática | 28,0 mL/cmH₂O |
+
+
+### 2
+
+Presión de conducción por encima de 15 cmH₂O: asociada con mayor mortalidad en el SDRA
+
+| Detalles del resultado | |
+| --- | --- |
+| Distensibilidad estática | 20,5 mL/cmH₂O |
+
+
+### 3
+
+Presión de distensión hasta 15 cmH₂O
+
+| Detalles del resultado | |
+| --- | --- |
+| Distensibilidad estática | 38,5 mL/cmH₂O |
+| Volumen corriente | 7,1 mL/kg de peso predicho |
+

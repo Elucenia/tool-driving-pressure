@@ -146,7 +146,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "ΔP=Pplat−PEEP; Cstat=VT/ΔP; contexto Amato 2015 ventilação passiva",
-    "implementationVersion": "driving-pressure@native-2026-10-03+dc496350e6e6",
+    "implementationVersion": "driving-pressure@native-2026-10-05+9858e74ae512",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/25693014/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -262,7 +262,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a"
+      "implementationHash": "9858e74ae51246321a4aa5142d1025062c33889235f4a39533a6564f2f569a1b",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "driving-pressure@native-2026-10-03+dc496350e6e6",
+          "previousImplementationHash": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a",
+          "implementationHash": "9858e74ae51246321a4aa5142d1025062c33889235f4a39533a6564f2f569a1b",
+          "scientificBodySha256": "d0557c77ab67211298a654d4e9ec62ff8c06f3852c4d4fb856064780364e34de",
+          "metadataContractHash": "981c67899dc9be1a01e341db4963e61a2eaaa3e7d4c1f85ca266d7b56984a510",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A análise Amato 2015 estudou 3562 pacientes com SDRA de nove ensaios prévios, no contexto de ventilação sem respiração ativa. A driving pressure foi analisada como VT/CRS e como variável associada à sobrevivência; essa associação não estabelece, sozinha, um limiar universal ou uma intervenção terapêutica guiada pelo cálculo. Técnica de medida e condições ventilatórias precisam ser conferidas.",
     "sourceLimitEvidence": {
@@ -281,15 +309,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/driving-pressure/calculator.js",
-    "bytes": 5100,
-    "sha256": "dc496350e6e67c0a2b58f37c987afae3db0bc7a3ea90d15033940d2804025f7a"
+    "bytes": 5305,
+    "sha256": "9858e74ae51246321a4aa5142d1025062c33889235f4a39533a6564f2f569a1b"
   },
-  "sourceToolSha256": "9b4b246efb5a5c6748f1fa239ca7883719026c9b43cac634c7a744b3f7025881",
+  "sourceToolSha256": "684271dc4346c2bfebccd0e62f57ae02e01d70fe9e3be60e6d13367a88638c86",
   "omittedFullReferenceBanks": [
     {
       "rows": 2,
       "sha256": "fdb62bb18eb195f207bc8685be992ad4fc14b2ef0417ad9aee86c546cc7e8b09",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

@@ -79,3 +79,35 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Driving pressure up to 15 cmH₂O
+
+| Result details | |
+| --- | --- |
+| Static compliance | 28.0 mL/cmH₂O |
+
+
+### 2
+
+Driving pressure above 15 cmH₂O: associated with higher mortality in ARDS
+
+| Result details | |
+| --- | --- |
+| Static compliance | 20.5 mL/cmH₂O |
+
+
+### 3
+
+Driving pressure up to 15 cmH₂O
+
+| Result details | |
+| --- | --- |
+| Static compliance | 38.5 mL/cmH₂O |
+| Tidal volume | 7.1 mL/kg of predicted body weight |
+

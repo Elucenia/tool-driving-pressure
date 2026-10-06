@@ -79,3 +79,35 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Pression motrice jusqu’à 15 cmH₂O
+
+| Détails du résultat | |
+| --- | --- |
+| Compliance statique | 28,0 mL/cmH₂O |
+
+
+### 2
+
+Pression de commande supérieure à 15 cmH₂O : associée à une mortalité plus élevée dans le SDRA
+
+| Détails du résultat | |
+| --- | --- |
+| Compliance statique | 20,5 mL/cmH₂O |
+
+
+### 3
+
+Pression motrice jusqu’à 15 cmH₂O
+
+| Détails du résultat | |
+| --- | --- |
+| Compliance statique | 38,5 mL/cmH₂O |
+| Volume courant | 7,1 mL/kg de poids prédit |
+
